@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="boom.css" rel="stylesheet">
+
+        
+    </head>
+    <body>
+        <header>
+
+            <div class="top">
+                <img src="img1.jpg">
+                <p style="margin-top: -1px; font-size: 13px; ;"> Knowledge | Truth | Excellence</p>
+            </div>
+            <div class="head">
+                <h2>UNIVERSITY OF MINES AND TECHNOLOGY (UMAT)</h2>
+            </div>
+
+        </header>
+        
+        <section class="doom">
+
+            <section class="nice">
+
+            
+                <div class="marquee"><h1>Department</h1></div>
+                <select name="department" id="department">
+                    <button type="reset"><option value="">Select a Department</option></button>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+                <div id="details">
+                    <div id="Computer-Science" class="com">
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer1" >Dr. Emmanuel Effah</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course1">Computer Science Engineering</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact1">eeffah@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer1" >Dr. Emmanuel Effah</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course1">Computer Science Engineering</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact1">eeffah@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer2">Dr. Felix Larbi Aryeh</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course2">Computer Science and Engineering</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact2">flaryeh@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer3">Dr. Ivy Botchway</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course3">Computer Science and Engineering</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact3">ibbotchway@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    <div id="Computer-Engineering" class="com">
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer4">Josephine Asaaba</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course4">Engineering Maths</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact4">@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        <div class="grid">
+                            <div style="padding: 6px;">
+                                <img src="img1.jpg">
+                                <h3 >Name: </h3>
+                                <p id="lecturer5">Hubert Quansah</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course5">Circuitry</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact5">@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    <div id="Cyber-Security" class="com">
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer6">Kobby Danquah</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course6">Cyber Laws</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact6">@umat.edu.gh</p>
+                            </div>
+                            
+                        </div>
+                        <div class="grid">
+                            <img src="img1.jpg">
+                            <div style="padding: 6px;">
+                                <h3 >Name: </h3>
+                                <p id="lecturer7">Meryvn Wilberforce</p><br><br>
+
+                                <h3>Department:</h3>
+                                <p id="course7">Physics for Cyber</p><br><br>
+
+                                <h3>Email:</h3>
+                                <p id="contact7">@umat.edu.gh</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                    <div>
+                        <p id="lecturer"></p>
+                        <p id="department"></p>
+                        <p id="contact"></p>
+                    </div>
+    
+            
+    
+                    <script>
+                        //Hide all department information by default
+                        document.getElementById("Computer-Science").style.display = "none";
+                        document.getElementById("Computer-Engineering").style.display = "none";
+                        document.getElementById("Cyber-Security").style.display = "none";
+                        
+                        document.getElementById("department").onchange = function() {
+                        var department = this.value;
+                        var details = document.getElementById("details");
+                        var computerScience = document.getElementById("Computer-Science");
+                        var computerEngineering = document.getElementById("Computer-Engineering");
+                        var cyberSecurity = document.getElementById("Cyber-Security");
+                        
+                        if (department == "Computer Science") {
+                        computerScience.style.display = "grid";
+                        computerEngineering.style.display = "none";
+                        cyberSecurity.style.display = "none";
+                        } else if (department == "Computer Engineering") {
+                        computerScience.style.display = "none";
+                        computerEngineering.style.display = "grid";
+                        cyberSecurity.style.display = "none";
+                        } else if (department == "Cyber Security") {
+                        computerScience.style.display = "none";
+                        computerEngineering.style.display = "none";
+                        cyberSecurity.style.display = "grid";
+                        }
+                        };
+                </script>
+    
+            
+                </div>
+            </section>    
+            
+            <footer>
+                <div class="mainfoot">
+    
+                    <div>
+                        <div style="display: flex; flex-direction: row; align-content: center;"> 
+                            <img src="UMaT-Logo-WhiteText.png">
+                        </div>
+                        <p>For more information, use the following</p>
+                        <p><strong>Hot line:</strong> +233 3121 97734</p>
+                        <p><strong>Email:</strong> registrar@umat.edu.gh</p>
+                        <p>webmaster@umat.edu.gh</p>
+                        <p><strong>Postal:</strong> Box 237, Tarkwa W/R</p>
+                        <div  class="logos">
+                            <div class="logo">
+                                <a href="https://web.facebook.com/umatedugh"><img src="facebook.png"></a>
+                            </div>
+                            <div class="logo">
+                                <a href="https://x.com/umatedugh"><img src="twitter.png"></a>
+                            </div>
+                            <div class="logo">
+                                <a href="https://www.instagram.com/umatedugh/"><img src="instagram-rounded-svgrepo-com.svg"></a>
+                            </div>
+                            <div class="logo">
+                                <a href="https://gh.linkedin.com/school/university-of-mines-and-technology-tarkwa/"><img src="linkedin-rounded-svgrepo-com.svg"></a>
+                            </div>
+                            <div class="logo">
+                                <a href="https://www.youtube.com/@umatedugh"><img src="youtube-square-svgrepo-com.svg"></a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+        
+                    <div>
+                        <div>
+                            <h2>Academics</h2>
+                        </div>
+                        <p>Faculty/Schools</p>
+                        <p>Academic Departments</p>
+                        <p>Art to Engineering</p>
+                        <p>Academic Calendar</p>
+                        <p>Scholarships & Beneficiaries</p>
+                        <p>UMaT Collaborators</p>
+                        
+                    </div>
+                    <div>
+                        <div>
+                            <h2>Admissions</h2>
+                        </div>
+                        <p>Postgraduate Admissions</p>
+                        <p>Undergraduate Admissions</p>
+                        <p>Admission Help Desk</p>
+                        <p>Admission Portal</p>
+                        <p>Check Admission Status</p>
+                    </div>
+                    <div>
+                        <div>
+                            <h2>Web Services</h2>
+                        </div>
+                        <p>Student Portal</p>
+                        <p>eLearning - VLE</p>
+                        <p>Research - ORIC</p>
+                        <p>Staff Directory</p>
+                        <p>Webmail</p>
+                        <p>Careers at UMaT</p>
+                    </div>
+    
+                </div>
+                <div class="secfoot">
+                    <p>Copyright @ 2023 Univeristy of Mines and Technology - Tarkwa. All rights Reserved</p>
+                </div>
+                
+            </footer>
+
+        </section>
+
+        
+    </body>
+</html>
+
+
+
+
+
+
